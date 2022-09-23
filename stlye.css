@@ -1,0 +1,11 @@
+:root {
+    --background-clr: #E7ECF0;
+
+    --main-font: "Roboto", sans-serif;
+
+}
+
+body {
+    height: 100vh;
+    font-family: var(--main-font);
+}
