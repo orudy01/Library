@@ -38,3 +38,33 @@ let size = myLibrary.length;
 for (let i = 0; i < size; i++) {
     console.table(myLibrary[i].info())
 }
+
+
+const newBookBtn = document.getElementById('newBookBtn');
+const closeFormBtn = document.querySelector('.close-button');
+const errorMsg = document.getElementById('errorMsg');
+
+const addBookModal = document.getElementById('addBookModal');
+const addBookForm = document.getElementById('addBookForm');
+
+
+const overlay = document.getElementById('overlay');
+
+overlay.addEventListener('click', () => {
+    closeModal;
+})
+
+const openAddBookModal = () => {
+    addBookForm.reset()
+    addBookModal.classList.add('active')
+    overlay.classList.add('active')
+}
+
+const closeModal = () => {
+    addBookModal.classList.remove('active')
+    overlay.classList.remove('active')
+}
+
+newBookBtn.onclick = openAddBookModal;
+closeFormBtn.onclick = closeModal;
+overlay.onclick = closeModal

@@ -9,3 +9,109 @@ body {
     height: 100vh;
     font-family: var(--main-font);
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* HEADER */
+
+header {
+    border: 1px solid black;
+    height: 92vh;
+    padding: 1rem;
+    background-color: rgb(249, 251, 250);
+}
+
+.welcome-msg {
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+/* MAIN */
+
+main {
+    padding: 1rem;
+    background-color: lightgray
+}
+
+.library-container {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+
+.sample-book {
+    height: 100px;
+    background-color: white;
+    padding: 1.5rem;
+    border-left: 8px solid blue;
+    border-radius: .3rem;
+    
+}
+
+
+/* MODALS */
+
+.modal {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: lightgray;
+    text-align: center;
+    transition: 200ms ease-in-out;
+    width: 200px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem;
+}
+
+.close-button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Utility classes */
+
+.container {
+    --max-width: 1110px;
+    --container-padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--container-padding) * 2));
+    margin-inline: auto;
+  }
