@@ -10,56 +10,48 @@
   <link rel="stylesheet" href="stlye.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet" />
   <title>Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
 <body>
   <div class="grid-container">
 
     <header>
-      <div>
-        <h2 class="welcome-msg">Welcome...</h2>
-      </div>
-      <div>
-        <button id="newBookBtn">New Book</button>
+      <div class="header-container">
+
+        <h2 class="welcome-msg">READING MAKES ME FEEL SMART</h2>
+        <div class="top-header">
+
+          <button id="newBookBtn" class="button">NEW BOOK</button>
+        </div>
+
+        <div class="middle-header">
+          <button class="button" onclick="loadCompleted()">Completed</button>
+          <button class="button ntr-button" onclick="loadNeedToRead()">Still Reading</button>
+          <button class="button" onclick="loadLibrary()">Show All</button>
+        </div>
+
       </div>
     </header>
 
     <main>
-      <h2>The Bookshelf</h2>
+      <h2 class="main-header">THE BOOKSHELF</h2>
       <div class="library-container">
-        
-        <div class="sample-book">
-          <h2>The Hobbit</h2>
-          <p>J.R.R. Tolkein</p>
-          <p>295</p>
-          <div class="read-status">
-            <label for="read-status">Finished</label>
-            <input class="checkbox" type="checkbox" id="readStatus" />
-          </div>
-        </div>
 
-        <div class="sample-book">
-          <h2>The Hobbit</h2>
-          <p>J.R.R. Tolkein</p>
-          <p>295</p>
-          <div class="read-status">
-            <label for="read-status">Finished</label>
-            <input class="checkbox" type="checkbox" id="readStatus" />
-          </div>
-        </div>
-        
       </div>
     </main>
 
   </div>
 
   <footer>
-    Copyright ©
-    <script>
-      document.write(new Date().getFullYear())
-    </script>
-    orudy01
-    </p>
+    <div class="footer-container">
+      Copyright ©
+      <script>
+        document.write(new Date().getFullYear())
+      </script>
+      Rodolfo Ortega
+      </p>
+    </div>
   </footer>
 
   <div class="modal" id="addBookModal">
@@ -75,7 +67,7 @@
         <label for="is-read">Have you read it?</label>
         <input class="checkbox" type="checkbox" id="isRead" />
       </div>
-      <button class="btn btn-light-green" type="submit">Submit</button>
+      <button class="button" type="submit">Submit</button>
     </form>
   </div>
 
