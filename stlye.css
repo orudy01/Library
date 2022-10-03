@@ -50,6 +50,7 @@ body {
     color: #ffd959;
 }
 
+
 /* HEADER */
 
 .header-container {
@@ -90,7 +91,7 @@ body {
     }
 
     .header-container {
-        height: 30vh;
+        height: 35vh;
         background-color: #f4f1e0;
         border-bottom: 4px solid #321e1e;
         border-right: none;
